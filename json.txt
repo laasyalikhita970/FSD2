@@ -1,0 +1,125 @@
+{
+    "widgets": [
+        {
+            "x": 0,
+            "y": 0,
+            "type": "static-text",
+            "title": "Welcome to PathForward AI",
+            "width": 12,
+            "height": 4,
+            "content": "PathForward AI is your personalized career and learning navigator designed for women returning to the workforce after a career break or transitioning careers. Share your background, target role, and available time, and receive a comprehensive 60-day learning plan with transferable skills analysis, skill gap identification, adaptive weekly schedules, portfolio project proposals, and employer pitch statements. An AI Career Coach is available for ongoing guidance."
+        },
+        {
+            "x": 0,
+            "y": 4,
+            "type": "text-input",
+            "title": "Past Background",
+            "width": 12,
+            "height": 6,
+            "placeholder": "Describe your previous work experience, education, skills, and any relevant projects or accomplishments..."
+        },
+        {
+            "x": 0,
+            "y": 10,
+            "type": "text-input",
+            "title": "Target Role",
+            "width": 12,
+            "height": 4,
+            "placeholder": "What role or career path are you pursuing? Be as specific as possible..."
+        },
+        {
+            "x": 0,
+            "y": 14,
+            "max": 40,
+            "min": 5,
+            "step": 1,
+            "type": "number-input",
+            "unit": "hours",
+            "title": "Weekly Available Hours",
+            "width": 12,
+            "height": 2,
+            "isOptional": false,
+            "numberWidgetMode": "both"
+        },
+        {
+            "x": 0,
+            "y": 16,
+            "type": "inferred-text",
+            "title": "Transferable Skills Analysis",
+            "width": 12,
+            "height": 10,
+            "prompt": "You are a career transition expert specializing in helping women return to the workforce. Based on this background: [Past Background] and this target role: [Target Role], conduct a thorough analysis of transferable skills. Identify specific skills, experiences, and strengths from their past that directly apply to the target role. Be encouraging and specific, highlighting concrete examples of how their background positions them well for this transition. Format as a detailed assessment with bullet points.",
+            "parameters": {
+                "model": "bedrock-anthropic.claude-4-6-sonnet-v1-0",
+                "temperature": 0
+            }
+        },
+        {
+            "x": 0,
+            "y": 26,
+            "type": "inferred-text",
+            "title": "Technical Skill Gaps",
+            "width": 12,
+            "height": 10,
+            "prompt": "You are a career advisor analyzing skill requirements. Given this past background: [Past Background] and this target role: [Target Role], identify the exact technical skill gaps that need to be addressed. Be specific about tools, technologies, certifications, or hard skills required for the target role that are missing or need updating. Prioritize these gaps by importance and learning time required. Present as a clear, actionable list with explanations for why each skill matters.",
+            "parameters": {
+                "model": "bedrock-anthropic.claude-4-6-sonnet-v1-0",
+                "temperature": 0
+            }
+        },
+        {
+            "x": 0,
+            "y": 36,
+            "type": "inferred-text",
+            "title": "60-Day Adaptive Learning Schedule",
+            "width": 12,
+            "height": 12,
+            "prompt": "You are an expert learning strategist creating a personalized career transition plan. Based on: Past Background: [Past Background], Target Role: [Target Role], Weekly Available Hours: [Weekly Available Hours], Transferable Skills: [Transferable Skills Analysis], and Skill Gaps: [Technical Skill Gaps]. Create a detailed 60-day week-by-week learning schedule (8-9 weeks total) that includes: specific learning objectives for each week, recommended resources (courses, books, tutorials), time allocation per skill area, built-in recovery buffer days (at least one per week), milestone checkpoints, and adaptability notes. Make it realistic, sustainable, and progressive. Format as a structured weekly breakdown with clear action items.",
+            "parameters": {
+                "model": "bedrock-anthropic.claude-4-6-sonnet-v1-0",
+                "temperature": 0
+            }
+        },
+        {
+            "x": 0,
+            "y": 48,
+            "type": "inferred-text",
+            "title": "Portfolio Project Proposal",
+            "width": 12,
+            "height": 12,
+            "prompt": "You are a career coach designing portfolio projects for career transitioners. Based on the Target Role: [Target Role], Past Background: [Past Background], and Learning Schedule: [60-Day Adaptive Learning Schedule], create a detailed hands-on portfolio project proposal that: demonstrates the key skills needed for the target role, leverages their existing background, can be realistically completed within 2-4 weeks, showcases problem-solving and initiative, and is impressive to potential employers. Include: project title, objective, detailed description, required skills demonstrated, step-by-step implementation phases, deliverables, and success criteria. Make it specific and actionable.",
+            "parameters": {
+                "model": "bedrock-anthropic.claude-4-6-sonnet-v1-0",
+                "temperature": 0
+            }
+        },
+        {
+            "x": 0,
+            "y": 60,
+            "type": "inferred-text",
+            "title": "Employer Pitch Statement",
+            "width": 12,
+            "height": 10,
+            "prompt": "You are a professional career branding specialist. Based on: Past Background: [Past Background], Target Role: [Target Role], Transferable Skills: [Transferable Skills Analysis], Learning Plan: [60-Day Adaptive Learning Schedule], and Portfolio Project: [Portfolio Project Proposal]. Craft a compelling 150-200 word elevator pitch statement that this person can use with potential employers. The pitch should: confidently frame their career break or transition as a strength, highlight transferable skills and unique perspective, demonstrate commitment through their learning journey, showcase the portfolio project as evidence of capability, and create enthusiasm about their value proposition. Make it authentic, powerful, and employer-focused.",
+            "parameters": {
+                "model": "bedrock-anthropic.claude-4-6-sonnet-v1-0",
+                "temperature": 0
+            }
+        },
+        {
+            "x": 0,
+            "y": 70,
+            "type": "chat",
+            "title": "AI Career Coach",
+            "width": 12,
+            "height": 12,
+            "parameters": {
+                "model": "bedrock-anthropic.claude-4-6-sonnet-v1-0",
+                "temperature": 0
+            },
+            "placeholder": "Ask me anything about your career transition, learning plan, or job search strategy...",
+            "initialUserMessage": "I've reviewed my personalized career transition plan including: my background [Past Background], my target role [Target Role], my transferable skills analysis [Transferable Skills Analysis], my skill gaps [Technical Skill Gaps], my 60-day learning schedule [60-Day Adaptive Learning Schedule], my portfolio project [Portfolio Project Proposal], and my employer pitch [Employer Pitch Statement]. I'm ready to discuss my career journey and get guidance.",
+            "initialAssistantMessage": "Welcome! I'm your AI Career Coach, and I've reviewed your complete PathForward plan. I'm here to help you navigate your career transition with personalized guidance. Whether you need help staying motivated, adapting your learning schedule, preparing for interviews, refining your portfolio project, or addressing any concerns about returning to the workforce, I'm here to support you. What would you like to discuss first?"
+        }
+    ]
+}

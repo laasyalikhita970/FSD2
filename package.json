@@ -4,6 +4,7 @@
   "description": "",
   "main": "hello_worls.js",
   "scripts": {
+    "start": "node week5-6/express-server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/laasyalikhita970/FSD2/issues"
   },
-  "homepage": "https://github.com/laasyalikhita970/FSD2#readme"
+  "homepage": "https://github.com/laasyalikhita970/FSD2#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
 }
